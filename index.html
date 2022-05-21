@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Marko G</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Marko<span>G </span>Blogs
+            </div>
+            <div class="menu" >
+                <a href="#">Home</a> 
+                 <a href="#about">About</a> 
+                  <a href="#gallery">Gallery</a> 
+                  <a href="#contact">Contact</a>
+
+            </div>
+            <div class="icon">
+                <i class="fa fa-search"></i>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h1 data-aos="fade-up">Capturing the moment that captivate your heart.</h1>
+            <input type="text" name=""placeholder ="Search here...">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header>
+    <section class="filter-gallery">
+        <div class="portfolio-menu">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".nature">Nature</li>
+                <li data-filter=".faishon">Faishon</li>
+                <li data-filter=".wedding">Wedding</li>
+            </ul>
+        </div>
+        <div class="portfolio-item">
+            <div class="item nature" data-aos="flip-left" data-aos-offset="300" data-aos-delay="100">
+                <img src="img/nature_mountain.jpg" width="100" height="100">
+            </div> 
+            <div class="item faishon" >
+                <img src="img/f2.jpg" width="100" height="100">
+            </div> <div class="item wedding">
+                <img src="img/f1.jpg" width="100" height="100">
+            </div>
+
+            <div class="item nature">
+                <img src="img//nn2.jpg" width="100" height="100">
+            </div> <div class="item faishon">
+                <img src="img/dd.jpg" width="100" height="100">
+            </div> <div class="item wedding">
+                <img src="img/nn1.jpg" width="100" height="100">
+            </div>
+
+            <div class="item nature">
+                <img src="img/nature_train.jpg" width="100" height="100">
+            </div> <div class="item faishon">
+                <img src="img/n1.jpg" width="100" height="100">
+            </div> <div class="item wedding">
+                <img src="img/wed.jpg" width="100" height="100">
+            </div>
+        </div>
+
+    </section>
+
+<section class="member">
+    <div class="member-info">
+        <h1>Our <span>Informations</span></h1>
+        <p>What our Friends Says..</p>
+    </div>
+    <div class="member-card">
+        <img src="img/f2.jpg" width="100">
+        <p>
+            “Find a group of people who challenge and inspire you; spend a lot of time with them, and it will change your life.”
+        </p>
+        <h2>* Mr. Marko G</h2>
+        <img src="img//icon1.png" width="100">
+        <img src="img//icon2.png" width="100">
+        <img src="img//icon3.png" width="100">
+        <img src="img//icon4.png" width="100">
+    </div>
+    <div class="m-images">
+        <img src="img/ba2.jpg">
+        <img src="img/pathak.jpg">
+        <img src="img/pa11.jpg">
+        <img src="img/v sir.jpg">
+        <img src="img/ppyn.jpg">
+        <img src="img/rizwan.jpg">
+    </div>
+</section>
+<footer id="conatct">
+    <div class="newsletter">
+        <div>
+        <h2>Subscribe our Channel</h2>
+        <p>Friendship Goals</p>
+    </div>
+    <div class="ntext">
+    
+    <label>
+        <input type="text" name="" placeholder="Email">
+        <button>Subscribe</button>
+    </label>
+    </div>
+    </div>
+    <div class="f-contact">
+        <div class="info">
+            <h1>Information</h1>
+            <p>Developer:Marko G</p>
+            <p>Email:skmark516@gmail.com</p>
+            <p>Contact:7000583601</p>
+
+            <li class="fa fa-linkedin"></li>
+            <li class="fa fa-instagram"></li><li class="fa fa-facebook"></li><li class="fa fa-twitter"></li>
+        </div>
+        <div>
+            <h1>Useful Link</h1>
+            <p>About us</p>
+            <p>Gallery</p>
+            <p>Blog Post</p>
+            <p>Princing Plans</p>
+        </div>
+        <div>
+            <h1>Friend Goals</h1>
+            <p>Crazynes</p>
+            <p>Happieness</p>
+            <p>MadeNess</p>
+           
+        </div>
+        <div>
+            <h1>C.S. Lewis</h1>
+            <p>“Friendship is born at that moment when one person says to another, ‘What! You too? I thought I was the only one.”</p>
+            
+        </div>
+    </div>
+</footer >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+    $('.portfolio-item').isotope({
+        // options
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+      });
+      
+      $('.portfolio-menu ul li').click(function() {
+          $('.portfolio-menu ul li').removeClass('active');
+          $(this).addClass('active');
+          var selector =$(this).attr('data-filter');
+          $('.portfolio-item').isotope({
+              filter:selector
+          });
+          return false;
+          
+      });
+      
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+</body>
+</html>
